@@ -3,62 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush | Developer Portfolio</title>
+    <title>Ayush Chand - Full Stack Developer & Data Science Enthusiast</title>
+    <meta name="description" content="Portfolio of Ayush Chand - Full Stack Developer and Data Science Enthusiast specializing in modern web solutions and AI applications.">
+    <meta name="keywords" content="Full Stack Developer, Data Science, Web Development, React, Python, JavaScript">
+    <meta name="author" content="Ayush Chand">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Hi, I'm Ayush! 🦄</h1>
-        <p>Turning caffeine and curiosity into code, one pixel at a time.</p>
-        <nav>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <button id="toggle-mode">🌗 Dark Mode</button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h2>Welcome to My Portfolio 🚀</h2>
-        <p>I’m a passionate developer and a current intern at <strong>CollegTips</strong>. I build sleek, scalable, and smart applications with a user-first mindset. Whether it's a college hackathon or a side project under moonlight, I love turning ideas into interactive realities.</p>
-        <button onclick="downloadResume()">Download Resume 📄</button>
-    </section>
-
-    <section id="projects">
-        <h2>💼 Projects</h2>
-        <div class="project">
-            <h3>CollegeTips Gallery</h3>
-            <p>Collegetips Gallery is a visual showcase of the dynamic and inspiring work environment at Collegetips office. From collaborative brainstorming sessions to moments of creativity and productivity, this gallery captures the essence of teamwork, innovation, and a positive workspace culture.</p>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <span class="loading-text">AC</span>
+                <div class="loading-ring"></div>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
         </div>
-        <div class="project">
-            <h3>JARVIS – AI Voice Assistant</h3>
-            <p>A personal voice-controlled AI assistant that can perform system operations, fetch web results, tell jokes, set alarms, and more. Built using Python with speech recognition and NLP capabilities.</p>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Ayush Chand</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="project">
-            <h3>Lecture Transcriber & Summarizer</h3>
-            <p>This tool records, transcribes, and summarizes lectures using speech-to-text and NLP, perfect for students and professionals to retain key points effortlessly.</p>
+    </nav>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="typewriter" id="typewriter">Ayush Chand</span>
+                </h1>
+                <p class="hero-title">Full Stack Developer & Data Science Enthusiast</p>
+                <p class="hero-description">Building innovative web solutions with modern technologies</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn--primary hero-cta">Contact Me</a>
+                    <a href="#about" class="btn btn--outline hero-cta">View Resume</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-image-placeholder">
+                        <div class="image-placeholder-icon">👨‍💻</div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-element" style="--delay: 0s;">💻</div>
+                        <div class="floating-element" style="--delay: 1s;">⚡</div>
+                        <div class="floating-element" style="--delay: 2s;">🚀</div>
+                        <div class="floating-element" style="--delay: 3s;">🔥</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
     </section>
 
-    <section id="about">
-        <h2>🌟 About Me</h2>
-        <p>I’m not just another coder. I'm Ayush – the kind who writes clean code, adds comments, and actually loves debugging. Outside of coding, you'll find me sketching, sipping chai, and listening to tech podcasts. I believe the best tech is built with empathy and curiosity. Currently interning at <strong>CollegTips</strong> where I’m soaking up experiences and building cool stuff!</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">I'm a passionate Computer Science student with a strong foundation in full-stack development and a growing interest in data science and AI. Currently pursuing my B.Tech at IMS Engineering College, I love building innovative web solutions that solve real-world problems.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="4">0</span>
+                            <span class="stat-label">Internships</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Skills</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>Education</h3>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-degree">Bachelor of Technology</div>
+                            <div class="education-field">Computer Science & Engineering</div>
+                            <div class="education-school">IMS Engineering College, Ghaziabad</div>
+                            <div class="education-duration">2022 - 2026</div>
+                            <div class="education-gpa">GPA: 8.1</div>
+                        </div>
+			    <div class="education-item">
+                            <div class="education-degree">XII</div>
+                            <div class="education-field">PCM</div>
+                            <div class="education-school">New Rainbow Public School, Ghaziabad</div>
+                            <div class="education-duration">2020 - 2021</div>
+                            <div class="education-gpa">Percentage: 76%</div>
+                        </div>
+			    <div class="education-item">
+                            <div class="education-degree">X</div>
+                            <div class="education-school">New Rainbow Public School, Ghaziabad</div>
+                            <div class="education-duration">2018 - 2019</div>
+                            <div class="education-gpa">Percentage: 88%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>📬 Contact Me</h2>
-        <p>Let’s connect! I'm always up for a collab, coffee chat, or freelance project.</p>
-        <ul>
-            <li><a href="mailto:AyushChand.1809@gmail.com">Email</a></li>
-            <li><a href="https://github.com/ayushchand18" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/ayush-chand-46000722a" target="_blank">LinkedIn</a></li>
-        </ul>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2024 - April 2024</div>
+                        <h3 class="timeline-title">Web Development Intern</h3>
+                        <h4 class="timeline-company">CollegeTips Ed. Tech. Media Pvt. Ltd.</h4>
+                        <p class="timeline-description">Designed and developed responsive front-end components using HTML, CSS, and JavaScript. Collaborated with development team to debug and optimize existing code.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">HTML</span>
+                            <span class="timeline-tag">CSS</span>
+                            <span class="timeline-tag">JavaScript</span>
+                            <span class="timeline-tag">React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2024 - July 2025</div>
+                        <h3 class="timeline-title">Community Captain</h3>
+                        <h4 class="timeline-company">Zuno by foundit</h4>
+                        <p class="timeline-description">Led community initiatives and managed team activities to enhance user engagement and platform growth.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Leadership</span>
+                            <span class="timeline-tag">Team Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">February 2024 - March 2024</div>
+                        <h3 class="timeline-title">Intern</h3>
+                        <h4 class="timeline-company">Zidio Development</h4>
+                        <p class="timeline-description">Gained hands-on experience in software development and project management practices.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Software Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2025 Ayush. Built with 💻 and ☕. Dark mode friendly.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my latest work</p>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="full-stack">Full Stack</button>
+                <button class="filter-btn" data-filter="nlp-ai">NLP/AI</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="ai-ml" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">Live Demo</a>
+                                <a href="#" target="_blank" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">JARVIS - AI Voice Assistant</h3>
+                        <p class="project-description">Developed an intelligent voice assistant using Python capable of performing tasks via speech recognition and natural language processing.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SpeechRecognition</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="nlp-ai" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">Live Demo</a>
+                                <a href="#" target="_blank" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Lecture Summarizer</h3>
+                        <p class="project-description">Created a tool to transcribe and summarize educational audio/video lectures using NLP techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLTK</span>
+                            <span class="tech-tag">Transformers</span>
+                        </div>
+                    </div>
+                </div>
+		<div class="project-card" data-category="full-stack" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">Live Demo</a>
+                                <a href="#" target="_blank" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+		    <div class="project-content">
+                        <h3 class="project-title">3D Solar System Simulation</h3>
+                        <p class="project-description">Developed a responsive webpage featuring an interactive 3D Solar System simulation using Three.js. Implemented realistic planetary orbits, dynamic lighting, and a real-time speed control panel for individual planets.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Three.js</span>
+                        </div>
+                    </div>
+		</div>
+                <div class="project-card" data-category="full-stack" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">Live Demo</a>
+                                <a href="#" target="_blank" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Login & Registration System</h3>
+                        <p class="project-description">Developed a secure user authentication system with database connectivity for user management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">My expertise across technologies</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category" data-aos="fade-up">
+                        <h3 class="category-title">Programming Languages</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Java</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up">
+                        <h3 class="category-title">Frontend Development</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">React</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML/CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Responsive Design</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up">
+                        <h3 class="category-title">Backend & Databases</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MySQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-aos="fade-up">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:AyushChand.1809@gmail.com">AyushChand.1809@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+919958703469">+91 9958703469</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <span>Ghaziabad, Uttar Pradesh, India</span>
+                        </div>
+                    </div>
+                    <div class="social-links" data-aos="fade-up">
+                        <a href="https://linkedin.com/in/ayush-chand-46000722a" target="_blank" class="social-link">
+                            <span class="social-icon">💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/ayushchand18" target="_blank" class="social-link">
+                            <span class="social-icon">🐙</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://leetcode.com/u/_ORbit_/" target="_blank" class="social-link">
+                            <span class="social-icon">⚡</span>
+                            <span>LeetCode</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-up">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                    <div class="form-message" id="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ayush Chand. All rights reserved.</p>
+                <p>Built with ❤️ </p>
+            </div>
+        </div>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
