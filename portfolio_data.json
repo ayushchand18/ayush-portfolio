@@ -1,0 +1,143 @@
+{
+  "personal_info": {
+    "name": "Ayush Chand",
+    "title": "Full Stack Developer & Data Science Enthusiast",
+    "tagline": "Building innovative web solutions with modern technologies",
+    "email": "AyushChand.1809@gmail.com",
+    "phone": "+91 9958703469",
+    "location": "Ghaziabad, Uttar Pradesh, India",
+    "linkedin": "https://linkedin.com/in/ayush-chand",
+    "github": "https://github.com/ayush-chand",
+    "leetcode": "https://leetcode.com/ayush-chand"
+  },
+  "education": {
+    "degree": "Bachelor of Technology",
+    "field": "Computer Science & Engineering",
+    "institution": "IMS Engineering College, Ghaziabad",
+    "duration": "2022 - 2026",
+    "gpa": "8.1",
+    "previous_education": {
+      "school": "New Rainbow Public School",
+      "year": "2021",
+      "level": "XII (12th Grade)"
+    }
+  },
+  "experience": [
+    {
+      "title": "Web Development Intern",
+      "company": "CollegeTips Ed. Tech. Media Pvt. Ltd.",
+      "duration": "March 2024 - Present",
+      "type": "Internship",
+      "responsibilities": [
+        "Designed and developed responsive front-end components using HTML, CSS, and JavaScript",
+        "Collaborated with development team to debug and optimize existing code",
+        "Assisted in integrating APIs and third-party tools to expand platform functionality",
+        "Participated in daily stand-ups and agile development practices"
+      ]
+    },
+    {
+      "title": "Community Captain",
+      "company": "Zuno by foundit",
+      "duration": "March 2024 - July 2025",
+      "type": "Leadership Role"
+    },
+    {
+      "title": "Intern",
+      "company": "Zidio Development",
+      "duration": "February 2024 - March 2024",
+      "type": "Internship"
+    },
+    {
+      "title": "Intern",
+      "company": "Mindler",
+      "duration": "December 2021 - January 2022",
+      "type": "Internship",
+      "location": "Noida, Uttar Pradesh, India"
+    }
+  ],
+  "skills": {
+    "programming_languages": [
+      "C++",
+      "Python",
+      "Java",
+      "JavaScript"
+    ],
+    "frontend": [
+      "HTML",
+      "CSS",
+      "React",
+      "Responsive Design"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "RESTful APIs"
+    ],
+    "databases": [
+      "MySQL",
+      "MongoDB"
+    ],
+    "tools": [
+      "GitHub",
+      "VS Code",
+      "Eclipse",
+      "Git"
+    ],
+    "other": [
+      "Data Science",
+      "Machine Learning",
+      "Problem Solving",
+      "Team Management",
+      "Teamwork"
+    ]
+  },
+  "projects": [
+    {
+      "name": "JARVIS - AI Voice Assistant",
+      "description": "Developed an intelligent voice assistant using Python capable of performing tasks via speech recognition and natural language processing. It automates actions like opening applications and fetching information.",
+      "technologies": [
+        "Python",
+        "SpeechRecognition",
+        "pyttsx3",
+        "NLP libraries"
+      ],
+      "category": "AI/ML"
+    },
+    {
+      "name": "Lecture Summarizer",
+      "description": "Created a tool to transcribe and summarize educational audio/video lectures. It extracts key points using NLP techniques and generates concise summaries for quick revision.",
+      "technologies": [
+        "Python",
+        "SpeechRecognition",
+        "NLTK",
+        "Transformers"
+      ],
+      "category": "NLP/AI"
+    },
+    {
+      "name": "Login & Registration System",
+      "description": "Developed a simple login & registration page with database connectivity for secure user authentication and data management.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "MongoDB"
+      ],
+      "category": "Full Stack"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Data Science using Python",
+      "issuer": "Q Academy",
+      "date": "June 2024"
+    },
+    {
+      "name": "Journey to Cloud: Envisioning Your Solution",
+      "issuer": "IBM",
+      "date": "2024"
+    }
+  ],
+  "about": "I'm a passionate Computer Science student with a strong foundation in full-stack development and a growing interest in data science and AI. Currently pursuing my B.Tech at IMS Engineering College, I love building innovative web solutions that solve real-world problems. My experience ranges from developing AI-powered applications to creating responsive web interfaces that deliver exceptional user experiences."
+}
