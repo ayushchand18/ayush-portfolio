@@ -1,4 +1,3 @@
-// Portfolio JavaScript - Modern Interactive Features
 class PortfolioApp {
     constructor() {
         this.init();
@@ -241,6 +240,9 @@ class PortfolioApp {
         
         if (!form || !formMessage) return;
         
+        // Initialize EmailJS with your User ID (replace 'YOUR_USER_ID' with the actual value from EmailJS)
+        emailjs.init('YOUR_USER_ID');  // Add this line here
+        
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
@@ -274,8 +276,14 @@ class PortfolioApp {
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
-            // Simulate form submission
-            setTimeout(() => {
+            // Send via EmailJS (replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual values)
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            })
+            .then((response) => {
                 formMessage.style.display = 'block';
                 formMessage.className = 'form-message success';
                 formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
@@ -289,7 +297,15 @@ class PortfolioApp {
                 setTimeout(() => {
                     formMessage.style.display = 'none';
                 }, 5000);
-            }, 1500);
+            })
+            .catch((error) => {
+                console.error('EmailJS error:', error);
+                formMessage.style.display = 'block';
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Failed to send message. Please try again.';
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 
