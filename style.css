@@ -1543,82 +1543,66 @@ section {
 }
 
 .skills-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  width: 100%;
 }
 
 .skills-categories {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* 3 columns max */
+  gap: 2.4rem; 
 }
 
 .skill-category {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-backdrop);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: 2rem;
-  transition: transform var(--transition-normal);
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 2.4rem 2rem;
+  box-shadow: 0 6px 32px rgba(60,60,120,0.12);
+  min-width: 0; /* Prevent overflow in grid */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.3s;
 }
 
 .skill-category:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(0,212,255,0.20), 0 2px 8px rgba(60,60,120,0.12);
 }
 
-.category-title {
-  font-family: var(--font-primary);
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--portfolio-highlight);
-  margin-bottom: 1.5rem;
-}
-
+/* Skill bars inside cards */
 .skills-list {
-  display: grid;
-  gap: 1rem;
+  width: 100%;
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .skill-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1.2rem;
 }
 
 .skill-name {
   font-weight: 500;
-  color: var(--portfolio-text);
+  width: 120px;
 }
 
 .skill-bar {
   flex: 1;
+  background: #242c40;
+  border-radius: 20px;
   height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  margin-left: 1rem;
   overflow: hidden;
 }
 
 .skill-progress {
+  display: block;
+  background: linear-gradient(90deg,#00d4ff 40%,#533a7b 100%);
   height: 100%;
-  background: var(--portfolio-gradient-2);
-  border-radius: 4px;
-  width: 0;
-  transition: width 2s ease;
-}
-
-.skills-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.skills-chart {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: var(--glass-shadow);
+  border-radius: 20px;
+  transition: width 1s cubic-bezier(.1,.6,.8,.3);
+  min-width: 24px;
 }
 
 /* Contact Section */
