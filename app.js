@@ -240,8 +240,7 @@ class PortfolioApp {
         
         if (!form || !formMessage) return;
         
-        // Initialize EmailJS with your User ID (replace 'YOUR_USER_ID' with the actual value from EmailJS)
-        emailjs.init('YOUR_USER_ID');  // Add this line here
+        emailjs.init('83o0USbLS6xVRbhRf');  // Add this line here
         
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -277,7 +276,7 @@ class PortfolioApp {
             submitBtn.disabled = true;
             
             // Send via EmailJS (replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual values)
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+            emailjs.send('service_mx4cx0w', 'template_9s7cb69', {
                 name: name,
                 email: email,
                 subject: subject,
