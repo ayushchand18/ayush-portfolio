@@ -60,5 +60,3 @@ Ayush Chand
 - Email: AyushChand.1809@gmail.com
 - GitHub: https://github.com/ayushchand18
 - LinkedIn: https://linkedin.com/in/ayush-chand
-
-[1] https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/97a1c53a50dff8fdcacb4d810f9dbea9/2dfe300c-e71e-4c62-916e-c4c9a701ef19/b3356305.md
