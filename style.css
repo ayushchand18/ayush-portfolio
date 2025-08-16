@@ -1410,7 +1410,7 @@ section {
 
 .project-image {
   height: 100px;
-  width: 100%;
+  width: 100px;
   background: var(--portfolio-gradient-2);
   position: relative;
   overflow: hidden;
